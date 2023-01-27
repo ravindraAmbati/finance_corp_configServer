@@ -2,18 +2,18 @@ spring:
   application:
     name: ConfigServer
   profiles:
-    active: git
-    #active: native
+    #active: git
+    active: native
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/ravindraAmbati/finance_corp_configurations.git
-          clone-on-start: true
-          default-label: main
-        #native:
+        #git:
+          #uri: https://github.com/ravindraAmbati/finance_corp_configurations.git
+          #clone-on-start: true
+          #default-label: main
+        native:
           #search-locations: file:///C:/workspace/finance corp microservices/configurations
-          #search-locations: classpath:/fincorp
+          search-locations: classpath:/fincorp
 server:
   port: 9050
 encrypt:
