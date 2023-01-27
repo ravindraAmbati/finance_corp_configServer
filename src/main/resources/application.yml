@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ConfigServer
+  profiles:
+    active:
+      - native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///C:/workspace/finance corp microservices/fincorp
+          #search-locations: classpath:/fincorp
+server:
+  port: 9050
+encrypt:
+  key: fincorp
